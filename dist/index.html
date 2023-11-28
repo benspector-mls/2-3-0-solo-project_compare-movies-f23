@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Movies</title>
+    <script type="module" crossorigin src="/assets/index-gJtpNHBm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-JF4eVo_i.css">
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <h1>Compare Movies</h1>
+        <div id="movies-form-and-list">
+          <form id="add-movie-form" aria-label="add-your-movies">
+            <h2>Add Your Movie</h2>
+
+            <div class="label-input">
+              <label for="movie-title">Movie Title</label>
+              <input type="text" name="movie-title" id="movie-title" required />
+            </div>
+            <div class="label-input">
+              <label for="domestic-box-office">Box Office</label>
+              <input
+                type="number"
+                name="domestic-box-office"
+                id="domestic-box-office"
+                required
+              />
+            </div>
+            <div class="label-input">
+              <label for="audience-score">Audience Score</label>
+              <input
+                type="number"
+                name="audience-score"
+                id="audience-score"
+                required
+              />
+            </div>
+            <div class="label-input">
+              <label for="critic-score">Critic Score</label>
+              <input
+                type="number"
+                name="critic-score"
+                id="critic-score"
+                required
+              />
+            </div>
+            <div class="label-input">
+              <label for="genre">Genre</label>
+              <select name="genre" id="genre-select" required>
+                <option value="">Select A Genre</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="concert">Concert</option>
+                <option value="documentary">Documentary</option>
+                <option value="musical">Musical</option>
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="thriller">Thriller</option>
+              </select>
+            </div>
+            <button>Add Movie</button>
+          </form>
+          <div id="movies-list-container">
+            <ul id="movies-list" tabindex="0"></ul>
+            <button id="reset">Reset Movies To Default</button>
+          </div>
+        </div>
+
+        <div id="charts">
+          <section class="chart-wrapper" aria-label="domestic-gross-bar-chart">
+            <h2>Domestic Box Office</h2>
+            <canvas id="domestic-bar-chart"></canvas>
+          </section>
+
+          <section
+            class="chart-wrapper"
+            aria-label="audience-vs-critic-score-scatter-chart"
+          >
+            <h2>Audience vs. Critic Score</h2>
+            <canvas id="audience-critic-score-chart"></canvas>
+          </section>
+
+          <section class="chart-wrapper" aria-label="genre-doughnut-charts">
+            <h2>Genres</h2>
+            <canvas id="genre-doughnut-chart"></canvas>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
